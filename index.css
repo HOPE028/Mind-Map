@@ -22,16 +22,46 @@ body {
   background: var(--background-color);
 }
 
-.content {
-  position: relative;
-}
-
 .node {
+  z-index: 5;
   position: absolute;
-  background: red;
+  background: #7ed957;
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.node-content {
+  /* position: aboslute; */
+
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+.node:hover ~ .node .node-content {
+  opacity: 1;
+}
+
+.center_node {
+  z-index: 100;
+  position: absolute;
+  background: #ff66c4;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
   display: flex;
   justify-content: center;
   align-items: center;
