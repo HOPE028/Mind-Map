@@ -25,6 +25,22 @@ body {
 .node {
   z-index: 5;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-relative {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-content {
+  z-index: 6;
   background: #7ed957;
   height: 40px;
   width: 40px;
@@ -36,17 +52,31 @@ body {
   font-size: 20px;
 }
 
-.node-content {
-  /* position: aboslute; */
-
+.box {
+  position: absolute;
+  top: 50px;
   opacity: 0;
+  background: rgba(230, 230, 230, 0.9);
+  padding: 5px;
+  border: 2px solid pink;
+  color: black;
   width: 200px;
-  height: 200px;
-  background: red;
+  transition: 0.3s ease-out;
+  /* visibility: hidden; */
+  /* visibility: hidden; */
 }
 
-.node:hover ~ .node .node-content {
+.box h1 {
+  font-size: 25px;
+}
+
+.box p {
+  font-size: 15px;
+}
+
+.node-content:hover + .box {
   opacity: 1;
+  transform: scale(1);
 }
 
 .center_node {
