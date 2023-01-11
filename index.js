@@ -23,12 +23,12 @@
   }
   function Bounds(el, pad = 0) {
     const box = el?.getBoundingClientRect() ?? {
-      left: innerWidth * 0.1,
-      top: innerHeight * 0.1,
-      right: innerWidth * 0.9,
-      bottom: innerHeight * 0.7,
-      width: innerWidth * 0.9,
-      height: innerHeight * 0.9,
+      left: 0,
+      top: 0,
+      right: innerWidth,
+      bottom: innerHeight,
+      width: innerWidth,
+      height: innerHeight,
     }
     return {
       l: box.left - pad,

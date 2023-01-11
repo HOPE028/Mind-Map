@@ -40,7 +40,7 @@ body {
 }
 
 .node-content {
-  z-index: 6;
+  z-index: 5;
   background: #7ed957;
   height: 40px;
   width: 40px;
@@ -53,17 +53,16 @@ body {
 }
 
 .box {
-  position: absolute;
-  top: 50px;
+  z-index: 1000;
+  /* position: absolute; */
+  /* top: 50px; */
   opacity: 0;
   background: rgba(230, 230, 230, 0.9);
   padding: 5px;
   border: 2px solid pink;
   color: black;
-  width: 200px;
+  width: 300px;
   transition: 0.3s ease-out;
-  /* visibility: hidden; */
-  /* visibility: hidden; */
 }
 
 .box h1 {
@@ -76,21 +75,15 @@ body {
 
 .node-content:hover + .box {
   opacity: 1;
-  transform: scale(1);
 }
 
 .center_node {
-  z-index: 100;
+  z-index: 50;
   position: absolute;
   background: #ff66c4;
   height: 80px;
   width: 80px;
   border-radius: 50%;
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 
   display: flex;
   justify-content: center;
