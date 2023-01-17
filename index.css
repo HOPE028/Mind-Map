@@ -42,8 +42,21 @@ body {
 .node-content {
   z-index: 5;
   background: #7ed957;
-  height: 40px;
-  width: 40px;
+  height: 43px;
+  width: 43px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+}
+
+.node-content-center {
+  z-index: 5;
+  background: #ff66c4;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -58,22 +71,26 @@ body {
   /* top: 50px; */
   opacity: 0;
   background: rgba(230, 230, 230, 0.9);
-  padding: 5px;
+  padding: 3px;
   border: 2px solid pink;
   color: black;
-  width: 300px;
+  width: 230px;
   transition: 0.3s ease-out;
 }
 
 .box h1 {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .box p {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .node-content:hover + .box {
+  opacity: 1;
+}
+
+.node-content-center:hover + .box {
   opacity: 1;
 }
 
@@ -81,8 +98,8 @@ body {
   z-index: 50;
   position: absolute;
   background: #ff66c4;
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
 
   display: flex;
